@@ -84,9 +84,6 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      volumes:
-      - name: tmp
-        emptyDir: {}
       {{- with .Values.server.volumes }}
         {{- toYaml . | nindent 6}}
       {{- end }}
